@@ -136,7 +136,7 @@ async function updateManyUser(users){
 //9- Use deleteOne to delete a user using the _id and display the number of deleted documents.
 async function deleteOneUser(users, id){
     const result=await users.deleteOne({
-        id:new ObjectId(id)
+        _id:new ObjectId(id)
     })
     console.log("deleted doc :", result.deletedCount)
 }
